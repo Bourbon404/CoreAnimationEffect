@@ -14,6 +14,7 @@ UIDynamicBehavior是属于UIKit下的一个提供元素具备动力学的东西�
 >step1.  创建一个行为实现者(UIDynamicAnimator)
 >step2.  创建你的行为 (UIDynamicBehavior)，系统提供了6种行为（包含iOS9中新增的）
 >step3.  将行为添加到实现这种
+
 简单的几个步骤就可以完成.
 其中需要注明的是,想要实现的元素，必须遵循UIDynamicItem协议，而UIView遵循了，所以可以用UIView实现.
 ##UIDynamicAnimator介绍
