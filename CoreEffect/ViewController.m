@@ -37,7 +37,7 @@
 {
     if (!_animator) {
         _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
-//        [_animator setDebugEnabled:YES];
+        [_animator setDebugEnabled:YES];
     }
     return _animator;
 }
@@ -106,7 +106,7 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
 //    [self snapFunction:touches];
-    [self collisionFunction];
+    [self fieldBehaviorFunction];
 }
 //重力行为
 -(void)grayityFunction

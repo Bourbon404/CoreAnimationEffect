@@ -16,7 +16,6 @@
 		6209927A1CC47BBC0026A7EA /* CoreAnimationEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 620992791CC47BBC0026A7EA /* CoreAnimationEffect.m */; };
 		62E510C31CC60B4700540FB9 /* BackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E510C21CC60B4700540FB9 /* BackView.m */; };
 		62E510C61CC62F2500540FB9 /* UIDynamicAnimator+AAPLDebugInterfaceOnly.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E510C51CC62F2500540FB9 /* UIDynamicAnimator+AAPLDebugInterfaceOnly.m */; };
-		62E510C81CC63A5800540FB9 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 62E510C71CC63A5800540FB9 /* File */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +35,6 @@
 		62E510C21CC60B4700540FB9 /* BackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackView.m; sourceTree = "<group>"; };
 		62E510C41CC62F2500540FB9 /* UIDynamicAnimator+AAPLDebugInterfaceOnly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDynamicAnimator+AAPLDebugInterfaceOnly.h"; sourceTree = "<group>"; };
 		62E510C51CC62F2500540FB9 /* UIDynamicAnimator+AAPLDebugInterfaceOnly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDynamicAnimator+AAPLDebugInterfaceOnly.m"; sourceTree = "<group>"; };
-		62E510C71CC63A5800540FB9 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +76,6 @@
 				62E510C11CC60B4700540FB9 /* BackView.h */,
 				62E510C21CC60B4700540FB9 /* BackView.m */,
 				620992781CC47BBC0026A7EA /* CoreAnimationEffect.h */,
-				62E510C71CC63A5800540FB9 /* File */,
 				620992791CC47BBC0026A7EA /* CoreAnimationEffect.m */,
 				6209926A1CC47BA20026A7EA /* Main.storyboard */,
 				6209926D1CC47BA20026A7EA /* Assets.xcassets */,
@@ -154,7 +151,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62E510C81CC63A5800540FB9 /* File in Resources */,
 				620992711CC47BA20026A7EA /* LaunchScreen.storyboard in Resources */,
 				6209926E1CC47BA20026A7EA /* Assets.xcassets in Resources */,
 				6209926C1CC47BA20026A7EA /* Main.storyboard in Resources */,
