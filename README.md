@@ -8,7 +8,8 @@ http://www.bourbonz.cn
 ===========================================
 这里介绍下一个在iOS7中就出现的功能UIDynamicBehavior,
 
-_说明
+_说明_
+
 UIDynamicBehavior是属于UIKit下的一个提供元素具备动力学的东西，能让你不着眼于复杂的物理公式，而实现多样的物理动画.具备像中重力、碰撞等行为.
 使用的步骤也很简单,
 >step1.  创建一个行为实现者(UIDynamicAnimator)
@@ -17,7 +18,9 @@ UIDynamicBehavior是属于UIKit下的一个提供元素具备动力学的东西�
 
 简单的几个步骤就可以完成.
 其中需要注明的是,想要实现的元素，必须遵循UIDynamicItem协议，而UIView遵循了，所以可以用UIView实现.
-##UIDynamicAnimator介绍
+
+_UIDynamicAnimator介绍_
+
 系统提供了两种Animator，一种是普通的，还有一种是用于UICollectionViewLayout.我们的重点在第一种上.
 有如下方法是经常用到的
 ```
@@ -40,7 +43,7 @@ UIDynamicBehavior介绍
 @property (nullable, nonatomic,copy) void (^action)(void);
 ```
 为了介绍这6种行为，我们先创建如下图的场景用于说明,具体用途后面会说明
-![](http://www.bourbonz.cn/wp-content/uploads/2016/04/4-2.png)
+![](http://upload-images.jianshu.io/upload_images/1025705-8e7185f9ba6e8ea5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 创建方式如下
 ```
 - (void)drawRect:(CGRect)rect {
@@ -64,7 +67,8 @@ UIBezierPath *path = [UIBezierPath bezierPath];
 [path stroke];
 }
 ```
-_UIGravityBehavior-
+_UIGravityBehavior_
+
 这个行为负责重力相关，提供类似自由落体的功能.
 方法简单，实现如下内容后就能刚看见效果
 ```
@@ -82,7 +86,9 @@ grayity = [[UIGravityBehavior alloc] initWithItems:@[redView]];
 1. gravityDirection属性是一个平面中向量的概念,它定义了运行方向,在iOS中左上角才是坐标原点,向右和向下分别为正方向,这点需要注意,所以在设置中要正确设置相关值(-1,0,1)
 2. angle角度,定义了在上面的变量值得基础上偏移的角度,从水平向右,向下方伸展为正方向.
 3. magnitude 定义了初始运动时的力的大小.
+
 _UICollisionBehavior_
+
 这个行为负责在碰撞时的相关内容.先查看代码
 ```
 //碰撞行为
@@ -97,7 +103,6 @@ UICollisionBehavior *collision = [[UICollisionBehavior alloc] initWithItems:@[re
 }
 ```
 这里先调用了一次重力行为，使两个元素进行碰撞.此时就能看见效果
-
 碰撞行为中还提供了添加路线的方法
 ```
 - (void)addBoundaryWithIdentifier:(id <NSCopying>)identifier forPath:(UIBezierPath *)bezierPath;
@@ -124,27 +129,10 @@ UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, 320
 [self.animator addBehavior:behavior];
 }
 ```
-//指定路径内碰撞
--(void)addPathCollisionFunction
-{
-[self grayityFunction];
-UICollisionBehavior *behavior = [[UICollisionBehavior alloc] initWithItems:@[redView]];
-
-//    //园
-UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, 320, 320)];
-[behavior addBoundaryWithIdentifier:@"circle" forPath:path];
-//线
-//    CGPoint startP = CGPointMake(0, 160);
-//    CGPoint endP = CGPointMake(320, 400);
-//    CGPoint startP1 = CGPointMake(320, 0);
-//    [behavior addBoundaryWithIdentifier:@"line1" fromPoint:startP toPoint:endP];
-//    [behavior addBoundaryWithIdentifier:@"line2" fromPoint:startP1 toPoint:endP];
-
-[self.animator addBehavior:behavior];
-}
-```
 这里实现了在进行碰撞后，元素按照预定好的线路进行运动，就像是给元素设置了一层外壁。这回知道我之前花的两条线是干什么的了吧^_^，起辅助观看作用.
+
 _UISnapBehavior_
+
 下面介绍的是捕捉行为,简单理解就是在屏幕中元素会弹跳到指定位置.需要注意的是,在进行下一个捕捉行为之前,需要移除上一个捕捉行为.提供了一个属性damping,用来表示力度大小，值的范围在0到1之间.值越大弹性效果越好
 ```
 //捕捉行为
@@ -162,6 +150,7 @@ UISnapBehavior *snap = [[UISnapBehavior alloc] initWithItem:redView snapToPoint:
 }
 ```
 _UIAttachmentBehavior_
+
 锚点行为,这个行为提供了一个元素按照锚点进行弹性伸展或者非弹性伸展的行为.实现方法也很简单,下面，先对一个元素添加重力行为,然后添加下面手势
 ```
 -(void)pan:(UIPanGestureRecognizer *)gesture
@@ -187,7 +176,9 @@ endPoint = point;
 }
 ```
 当看到元素下坠的时候，滑动屏幕，机会看到元素随着滑动而进行运动，就像有一个弹簧，连接着一个点和元素
+
 _UIFieldBehavior_
+
 下面要说的这个行为是iOS9中新增加的行为，可以理解为在使用这个行为后，系统在view上添加了一个扭曲的空间,元素在这个扭曲的空间上进行一些列运动行为.
 在创建行为的时候系统提供了一些方法,这里使用下面的方法
 ```
@@ -240,4 +231,6 @@ _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
 return _animator;
 }
 ```
-![扭曲空间](http://www.bourbonz.cn/wp-content/uploads/2016/04/5.png)
+![扭曲空间](http://upload-images.jianshu.io/upload_images/1025705-856a7c933cead5a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+点我下载代码(https://github.com/zhwe130205/CoreAnimationEffect)
