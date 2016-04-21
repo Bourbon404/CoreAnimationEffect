@@ -16,6 +16,12 @@
 		6209927A1CC47BBC0026A7EA /* CoreAnimationEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 620992791CC47BBC0026A7EA /* CoreAnimationEffect.m */; };
 		62E510C31CC60B4700540FB9 /* BackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E510C21CC60B4700540FB9 /* BackView.m */; };
 		62E510C61CC62F2500540FB9 /* UIDynamicAnimator+AAPLDebugInterfaceOnly.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E510C51CC62F2500540FB9 /* UIDynamicAnimator+AAPLDebugInterfaceOnly.m */; };
+		62E510CA1CC75D9200540FB9 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E510C91CC75D9200540FB9 /* 1.png */; };
+		62E510F71CC879E400540FB9 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E510F61CC879E400540FB9 /* SecondViewController.m */; };
+		62E510FA1CC879F200540FB9 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E510F91CC879F200540FB9 /* ThirdViewController.m */; };
+		62E510FD1CC87AE600540FB9 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E510FC1CC87AE600540FB9 /* NavigationController.m */; };
+		62E511001CC87B0300540FB9 /* PopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E510FF1CC87B0300540FB9 /* PopAnimation.m */; };
+		62E511031CC87FF400540FB9 /* NavigationInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E511021CC87FF400540FB9 /* NavigationInteractiveTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,17 @@
 		62E510C21CC60B4700540FB9 /* BackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackView.m; sourceTree = "<group>"; };
 		62E510C41CC62F2500540FB9 /* UIDynamicAnimator+AAPLDebugInterfaceOnly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDynamicAnimator+AAPLDebugInterfaceOnly.h"; sourceTree = "<group>"; };
 		62E510C51CC62F2500540FB9 /* UIDynamicAnimator+AAPLDebugInterfaceOnly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDynamicAnimator+AAPLDebugInterfaceOnly.m"; sourceTree = "<group>"; };
+		62E510C91CC75D9200540FB9 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		62E510F51CC879E400540FB9 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		62E510F61CC879E400540FB9 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		62E510F81CC879F200540FB9 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		62E510F91CC879F200540FB9 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		62E510FB1CC87AE600540FB9 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		62E510FC1CC87AE600540FB9 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		62E510FE1CC87B0300540FB9 /* PopAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAnimation.h; sourceTree = "<group>"; };
+		62E510FF1CC87B0300540FB9 /* PopAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAnimation.m; sourceTree = "<group>"; };
+		62E511011CC87FF400540FB9 /* NavigationInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationInteractiveTransition.h; sourceTree = "<group>"; };
+		62E511021CC87FF400540FB9 /* NavigationInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationInteractiveTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +84,7 @@
 		620992601CC47BA10026A7EA /* CoreEffect */ = {
 			isa = PBXGroup;
 			children = (
+				62E510C91CC75D9200540FB9 /* 1.png */,
 				620992641CC47BA10026A7EA /* AppDelegate.h */,
 				620992651CC47BA10026A7EA /* AppDelegate.m */,
 				620992671CC47BA10026A7EA /* ViewController.h */,
@@ -77,7 +95,17 @@
 				62E510C21CC60B4700540FB9 /* BackView.m */,
 				620992781CC47BBC0026A7EA /* CoreAnimationEffect.h */,
 				620992791CC47BBC0026A7EA /* CoreAnimationEffect.m */,
+				62E510F51CC879E400540FB9 /* SecondViewController.h */,
+				62E510F61CC879E400540FB9 /* SecondViewController.m */,
+				62E510F81CC879F200540FB9 /* ThirdViewController.h */,
+				62E510F91CC879F200540FB9 /* ThirdViewController.m */,
+				62E510FB1CC87AE600540FB9 /* NavigationController.h */,
+				62E510FC1CC87AE600540FB9 /* NavigationController.m */,
+				62E510FE1CC87B0300540FB9 /* PopAnimation.h */,
+				62E510FF1CC87B0300540FB9 /* PopAnimation.m */,
 				6209926A1CC47BA20026A7EA /* Main.storyboard */,
+				62E511011CC87FF400540FB9 /* NavigationInteractiveTransition.h */,
+				62E511021CC87FF400540FB9 /* NavigationInteractiveTransition.m */,
 				6209926D1CC47BA20026A7EA /* Assets.xcassets */,
 				6209926F1CC47BA20026A7EA /* LaunchScreen.storyboard */,
 				620992721CC47BA20026A7EA /* Info.plist */,
@@ -125,6 +153,7 @@
 				TargetAttributes = {
 					6209925D1CC47BA10026A7EA = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = J75WQTUZC9;
 					};
 				};
 			};
@@ -152,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				620992711CC47BA20026A7EA /* LaunchScreen.storyboard in Resources */,
+				62E510CA1CC75D9200540FB9 /* 1.png in Resources */,
 				6209926E1CC47BA20026A7EA /* Assets.xcassets in Resources */,
 				6209926C1CC47BA20026A7EA /* Main.storyboard in Resources */,
 			);
@@ -166,9 +196,14 @@
 			files = (
 				620992691CC47BA10026A7EA /* ViewController.m in Sources */,
 				620992661CC47BA10026A7EA /* AppDelegate.m in Sources */,
+				62E511001CC87B0300540FB9 /* PopAnimation.m in Sources */,
+				62E510FA1CC879F200540FB9 /* ThirdViewController.m in Sources */,
+				62E510FD1CC87AE600540FB9 /* NavigationController.m in Sources */,
 				62E510C61CC62F2500540FB9 /* UIDynamicAnimator+AAPLDebugInterfaceOnly.m in Sources */,
+				62E510F71CC879E400540FB9 /* SecondViewController.m in Sources */,
 				6209927A1CC47BBC0026A7EA /* CoreAnimationEffect.m in Sources */,
 				62E510C31CC60B4700540FB9 /* BackView.m in Sources */,
+				62E511031CC87FF400540FB9 /* NavigationInteractiveTransition.m in Sources */,
 				620992631CC47BA10026A7EA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,10 +318,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CoreEffect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bourbonz.CoreEffect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -295,10 +333,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CoreEffect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bourbonz.CoreEffect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -78,6 +78,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    UIImage *image = [UIImage imageNamed:@"1.png"];
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:(UIBlurEffectStyleLight)];
+    UIVibrancyEffect *effect1 = [UIVibrancyEffect effectForBlurEffect:effect];
+    UIVisualEffectView *visualView = [[UIVisualEffectView alloc] initWithEffect:effect1];
+//    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+//    [imageView setFrame:self.view.frame];
+    [visualView setFrame:self.view.frame];
+//    [self.view addSubview:imageView];
+//    [imageView addSubview:visualView];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:self.view.frame];
+    [label setText:@"hello world"];
+    [label setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:30]];
+    [label setTextAlignment:(NSTextAlignmentCenter)];
+//    [visualView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [visualView.contentView addSubview:label];
+    [self.view addSubview:visualView];
+    
+//    vibrancyView.setTranslatesAutoresizingMaskIntoConstraints(false)
+//    blurView.contentView.addSubview(vibrancyView)
+//    var label: UILabel = UILabel()
+//    label.setTranslatesAutoresizingMaskIntoConstraints(false)
+//    label.text = "Vibrancy Effect"
+//    label.font = UIFont(name: "HelveticaNeue-Bold", size: 30)
+//    label.textAlignment = .Center
+//    label.textColor = UIColor.whiteColor()
+//    vibrancyView.contentView.addSubview(label)
+    return;
+    
+    
     BackView *back = [[BackView alloc] init];
     [back setBackgroundColor:[UIColor clearColor]];
     [back setFrame:self.view.frame];
