@@ -8,6 +8,9 @@
 
 #import "SecondViewController.h"
 #import "ThirdViewController.h"
+#import "MySlider.h"
+#import "Slider.h"
+#import "NetEasySlider.h"
 @interface SecondViewController ()
 
 @end
@@ -17,15 +20,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.hidden = YES;
+    
+    NetEasySlider *slider = [[NetEasySlider alloc] initWithFrame:self.view.frame];
+    slider.minValue = 0;
+    slider.maxValue = 100;
+    slider.center = self.view.center;
+    [slider addTarget:self action:@selector(value:) forControlEvents:(UIControlEventValueChanged)];
+    [self.view addSubview:slider];
+    
+    self.view.backgroundColor = [UIColor lightGrayColor];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)value:(NetEasySlider *)slider
+{
+    NSLog(@"%f",slider.currentValue);
+}
 /*
 #pragma mark - Navigation
 
