@@ -7,7 +7,7 @@
 //
 
 #import "ThirdViewController.h"
-
+#import "NetEasySlider.h"
 @interface ThirdViewController ()
 
 @end
@@ -18,6 +18,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor purpleColor];
+    
+    NetEasySlider *slider = [[NetEasySlider alloc] initWithFrame:self.view.frame];
+    slider.minValue = 0;
+    slider.maxValue = 100;
+    slider.center = self.view.center;
+    [self.view addSubview:slider];
+
 }
 
 - (void)didReceiveMemoryWarning {

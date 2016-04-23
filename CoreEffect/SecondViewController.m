@@ -39,7 +39,7 @@
 }
 -(void)value:(NetEasySlider *)slider
 {
-    NSLog(@"%f",slider.currentValue);
+//    NSLog(@"%f",slider.currentValue);
 }
 /*
 #pragma mark - Navigation
