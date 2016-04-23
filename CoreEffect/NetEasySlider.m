@@ -7,14 +7,16 @@
 //
 
 #import "NetEasySlider.h"
-#define kTroughImage [UIImage imageNamed:@"cm2_efc_knob_trough_prs"]
-#define kNeedleImage [UIImage imageNamed:@"cm2_efc_knob_needle_prs"]
-#define kScaleImage  [UIImage imageNamed:@"cm2_efc_knob_scale"]
+#define kTroughImage [UIImage imageNamed:@"cm2_efc_knob_trough_prs"]    //中心圆形
+#define kNeedleImage [UIImage imageNamed:@"cm2_efc_knob_needle_prs"]    //中间指针
+#define kScaleImage  [UIImage imageNamed:@"cm2_efc_knob_scale"]         //中间灰色进度条
 
 @interface NetEasySlider ()
 {
     UIImageView *needleView;
+    //半径
     CGFloat radius;
+    //当前角度
     CGFloat angle;
 }
 @end
@@ -29,12 +31,10 @@
         [self addSubview:needleView];
         
         radius = kScaleImage.size.width/2-1;
-        if (self.currentValue == 0) {
-            angle = M_PI;
-        }
+        angle = M_PI;
         
         self.backgroundColor = [UIColor clearColor];
-        
+        //旋转坐标系
         self.transform = CGAffineTransformMakeScale(1, -1);
     }
     return self;
@@ -45,13 +45,16 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     
+    //绘制背景图片
     CGContextRef ref = UIGraphicsGetCurrentContext();
     CGContextDrawImage(ref, CGRectMake((self.frame.size.width-kScaleImage.size.width)/2.0, (self.frame.size.height-kScaleImage.size.height)/2.0, kScaleImage.size.width, kScaleImage.size.height), kScaleImage.CGImage);
     CGContextDrawImage(ref, CGRectMake((self.frame.size.width-kTroughImage.size.height)/2.0, (self.frame.size.height-kTroughImage.size.width)/2.0, kTroughImage.size.width, kTroughImage.size.height), kTroughImage.CGImage);
+    //绘制红色进度条
     CGContextAddArc(ref, self.center.x, self.center.y, radius, M_PI, angle, YES);
     CGContextSetLineWidth(ref, 2);
     CGContextSetStrokeColorWithColor(ref, [UIColor redColor].CGColor);
     CGContextStrokePath(ref);
+    //指针根据角度进行旋转
     needleView.transform = CGAffineTransformMakeRotation(angle+M_PI_2);
 
 }
